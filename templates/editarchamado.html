@@ -1,0 +1,81 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+
+
+Editar Chamado
+
+
+{% endblock %}
+
+{% block conteudo %}
+
+
+<body style="text-align: center;  font-family: Segoe UI;">
+
+
+
+    <div>
+
+        
+        <h1 style="text-align: center; font-size: 25px; font-family: Segoe UI;">
+            Por favor, edite os dados do chamado
+
+            <form method="POST" action="/editarchamado/{{chamado[0]}}">
+                <div>
+                    <select class="selectform" name="urgencia">
+                        {%if chamado[9] is none %}
+                        <option>Urgencia</option>
+                        {%else%}
+                        <option value="{{chamado[9]}}">{{chamado[9]}}</option>
+                        {%endif%}
+                        <option value="alta">alta</option>
+                        <option value="media">média</option>
+                        <option value="baixa">baixa</option>
+                    </select>
+                </div>
+                <div>
+                    {%if chamado[7] is none %}
+                    <input style="margin: 5px" class="inputlogin" type="text" name="observacao" placeholder="Observação"
+                        required>
+                    {% else %}
+                    <input style="margin: 5px" class="inputlogin" type="text" name="observacao" placeholder="Observação"
+                        value="{{chamado[7]}}" required>
+                    {% endif %}
+                </div>
+                <div>
+                    {%if chamado[2] is none %}
+                    <input style="margin: 5px" class="inputlogin" type="text" name="id_equipamento"
+                        placeholder="ID do equipamento" required>
+                    {% else %}
+                    <input style="margin: 5px" class="inputlogin" type="text" name="id_equipamento"
+                        placeholder="ID do equipamento" value="{{chamado[2]}}" required>
+                    {% endif %}
+                </div>
+
+
+    </div>
+    {% set mensagens = get_flashed_messages()%}
+    {% if mensagens%}
+    <div class=class="msg-alertas">
+        {%for msg in mensagens%}
+        <span class="ms erro"><i class="icon icon-hand-paper-o"></i>{{(msg)}}</span>
+
+    </div>
+    {%endfor%}
+
+    {%endif%}
+    <br>
+    <button class="botaologin" type="submit">Atualizar</button>
+
+
+
+
+    </form>
+    <br>
+
+    </div>
+
+
+</body>
+{% endblock %}

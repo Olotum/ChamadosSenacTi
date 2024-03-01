@@ -1,0 +1,388 @@
+/* Navbar */
+.navbar {
+  list-style-type: none;
+  background: linear-gradient(90deg, rgba(246, 140, 31, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(0, 75, 141, 1) 100%);
+  padding: 0.8rem 0;
+  margin: 0;
+}
+
+.navbar .container-template {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand,
+.navbar-brand1,
+.navbar-brand2 {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 0.3cm;
+  font-family: Segoe UI;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navbar-nav {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-link1 {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 13px;
+  margin-right: 0.2cm;
+  font-family: Segoe UI;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-nav .nav-link1 {
+  color: #fff;
+  font-size: 12px;
+  margin-left: 0.2cm;
+  font-family: Segoe UI;
+}
+
+/* Menulateral */
+nav.menulateral {
+  width: 64px;
+  height: 100%;
+  background-color: #01498C;
+  padding: 40px 0 40px 1%;
+  box-shadow: 4px 0 0 #fd7e14;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+nav.menulateral.expandir {
+  width: 240px;
+}
+
+.btnexpandir {
+  width: 100%;
+  padding-left: 8px;
+}
+
+.btnexpandir i {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ul {
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li.item-menu:hover {
+  background: #fd7e14;
+  border-radius: 8px;
+}
+
+ul li.item-menu {
+  transition: 0.4s;
+  margin-top: 8px;
+}
+
+ul li.active {
+  background-color: #fd7e14;
+  border-radius: 8px 0 0 8px;
+}
+
+ul li.item-menu a {
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 72px;
+  transition: 1.26s;
+  opacity: 0;
+}
+
+nav.menulateral.expandir .txt-link {
+  margin-left: 32px;
+  opacity: 2;
+}
+
+ul li.item-menu a .icon i {
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+/* Página Inicial */
+logincodigos body {
+  height: 400vh;
+}
+
+/* Tabela */
+.table-direita {
+  margin-left: 10%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0px;
+  text-align: center;
+  border: 1px solid #ddd;
+  /* Adicionando borda em todas as células */
+}
+
+th {
+  font-weight: bold;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #eee;
+}
+
+/* Botões */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.editar,
+.excluir,
+.atender {
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  /* Garante que os botões ocupem apenas o espaço necessário */
+  margin-right: 10px;
+  /* Adiciona espaçamento entre os botões */
+  padding: 10px 20px;
+  /* Padroniza o preenchimento dos botões */
+}
+
+.editar {
+  background-color: #01498C;
+}
+
+.excluir {
+  background-color: red;
+}
+
+.atender {
+  background-color: #8c0101;
+}
+
+.atender:hover,
+.editar:hover,
+.excluir:hover {
+  opacity: 0.8;
+  /* Reduz a opacidade ao passar o mouse */
+}
+
+/* Estilos para links */
+a {
+  color: #007bff;
+  /* Azul */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  /* Azul mais escuro ao passar o mouse */
+}
+
+/* Login */
+.logosenac {
+  width: 150px;
+  height: 150px;
+}
+
+.caixatexto {
+  display: inline-block;
+  padding: 20px;
+}
+
+.text {
+  padding-left: 25px;
+  color: rgb(67, 65, 65);
+  font-size: 2em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(20), cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.container {
+  justify-self: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 500px;
+  height: 400px;
+  margin: 20px auto;
+}
+
+.glass {
+  margin-top: 100px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.divlogin {
+  font-family: 'Archivo Black', sans-serif;
+  text-align: center;
+  justify-self: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.inputlogin,
+.selectform {
+  color: rgb(3, 3, 3);
+  border-color: seashell;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin: 10px;
+  padding: 10px 30px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Estilizando a seta do select */
+.selectform::-ms-expand {
+  display: none;
+}
+
+.selectform::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Estilizando o foco do select */
+.selectform:focus {
+  border-color: dodgerblue;
+}
+
+.pass,
+.user {
+  position: relative;
+}
+
+.user i,
+.pass i {
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  right: 30%;
+  color: gray;
+}
+
+.botaologin {
+  color: seashell;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 5px;
+  height: 40px;
+  width: 200px;
+  background-color: #0f456e;
+  transition: 0.3s;
+}
+
+.botaologin:hover {
+  -webkit-box-shadow: 0px 0px 30px 3px #6fb3e6;
+  -moz-box-shadow: 0px 0px 30px 3px #6fb3e6;
+  box-shadow: 0px 0px 30px 3px #6fb3e6;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  padding-left: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropbtn {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  font-size: 13px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #fd7e14;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.divimg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
